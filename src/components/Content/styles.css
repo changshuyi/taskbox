@@ -1,5 +1,3 @@
-
-
 .hotelBlock .lion{
 	margin-right: 6px;
 }
@@ -20,6 +18,21 @@
 	padding: 10px 0px;
 	text-align: center;
 	font-size: 14pt;
+}
+
+.hotelBlock>.title::before{
+	content:'';
+	background-image:url("../img/ic_hotel@2x.png");
+	background-repeat:no-repeat;
+	background-position:center;
+    background-size:24px 24px;
+	display: inline-block;
+	margin-right: 6px;
+    width:24px;
+    height:24px;
+	top: 5px;
+	vertical-align: top;
+	overflow: hidden;
 }
 
 .hotelBlock.active .content{
@@ -86,6 +99,50 @@
 	margin-right: 4px;
 }
 
+.location::before{
+	content:'';
+	background-image:url("../img/ic_location@2x.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:16px 16px;
+	display: inline-block;
+	margin-right: 6px;
+    width:16px;
+    height:16px;
+	top: 4px;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.map::before{
+	content:'';
+	background-image:url("../img/ic_map@2x.png");
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:16px 16px;
+	display: inline-block;
+	margin-right: 6px;
+    width:16px;
+    height:16px;
+	top: 4px;
+	vertical-align: top;
+	overflow: hidden;
+}
+
+.detail::before{
+	content:'';
+	background-image:url("../img/ic_poi_description@2x.png");
+	background-repeat:no-repeat;
+	background-position:center;
+    background-size:16px 16px;
+	display: inline-block;
+	margin-right: 6px;
+    width:16px;
+    height:16px;
+	top: 4px;
+	vertical-align: top;
+	overflow: hidden;
+}
 
 .hotelBlock .content .itemInfo .mealType>select{
 	height: 20px;
@@ -104,4 +161,38 @@
 .hotelBlock .content .itemInfo.noHotel i.fa{
 	color: #CCC;
 	margin-right: 4px;
+}
+
+/*i icon -------*/
+
+i.lion.hotel {
+	top: 5px;
+	width: 24px;
+	height: 24px;
+	background: url("../img/ic_hotel@2x.png") center center no-repeat;
+	background-size: 24px 24px;
+}
+
+i.lion.location {
+	top: 5px;
+	width: 20px;
+	height: 20px;
+	background: url("../img/ic_location@2x.png") center center no-repeat;
+	background-size: 20px 20px;
+}
+
+i.lion.map {
+	top: 2px;
+	width: 16px;
+	height: 13px;
+	background: url("../img/ic_map@2x.png") center center no-repeat;
+	background-size: 16px 13px;
+}
+
+i.lion.detail{
+	top: 4px;
+	width: 16px;
+	height: 16px;
+	background: url("../img/ic_poi_description@2x.png") center center no-repeat;
+	background-size: 16px 16px;
 }
