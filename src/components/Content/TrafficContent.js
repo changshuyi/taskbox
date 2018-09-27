@@ -4,7 +4,7 @@ import './styles.css';
 
 /**
  * 1.TrafficContent 最大區塊 (交通小卡只需要顯示交通時間跟方式，目前就先不分區塊)
- * 2.action
+ * 2.action (拉到Base.func)
  * 3.css ok
 */
 
