@@ -9,7 +9,7 @@ import './styles.css';
  * 4.DetailList 放附近、位置、詳情區塊 (放到HotelContent中)
  * 5.DetailItem 附近、位置、詳情 小區塊按鈕 ((放到DetailList中 / 之後拉出來)
  * 6.DropdownSelect 下拉選單區塊 (放到HotelContent中 / 之後拉出來)
- * 7.動作、共用action (之後拉出來)
+ * 7.動作、共用action (拉到Base.func)
  * 8.css ok
  */
 
@@ -103,11 +103,6 @@ class HotelContent extends Component {
     };
   }
 
-  //控制開關右邊顯示資料的block 待補齊action
-  rightBlockSwitch = (type) => {
-    console.log(type);
-  }
-
   toggleHotel = () => {
     this.setState({
       activeBlock: !this.state.activeBlock
@@ -123,7 +118,7 @@ class HotelContent extends Component {
               <ImageBlock img={this.props.datas.thumbnail[0].img} />
               <TitleBlock titlename={this.props.datas.name} />
               <div className="detailBtn singleItem" data-pid={this.props.datas.key}>
-                <DetailList detailitem={this.state.detailitem} onItemClick={this.rightBlockSwitch}/>
+                <DetailList detailitem={this.state.detailitem} onItemClick={this.props.action.onRightBlockSwitch}/>
               </div>
               {
                 this.props.datas.guideList.length > 0 ? <DropdownSelect dropdownItem={this.props.datas.guideList}/> : '' /** disabled的判斷 等有api時再放*/
@@ -136,11 +131,14 @@ class HotelContent extends Component {
 }
 
 HotelContent.defaultProps = {
-
+  
 };
 
 HotelContent.propTypes = {
-
+  onTrafficClick: PropTypes.func,
+  onRightBlockSwitch: PropTypes.func,
+  onPinTask: PropTypes.func,
+  onArchiveTask: PropTypes.func,
 };
 
 export default HotelContent;
