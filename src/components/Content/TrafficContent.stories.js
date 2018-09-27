@@ -1,8 +1,8 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
 
 import TrafficContent from './TrafficContent';
+import { task, actions } from '../Base/Base.func';
 
 let datas = {
     "category": "4",
@@ -594,20 +594,5 @@ let datas = {
     }
 };
 
-const task = {
-  id: '1',
-  title: 'Test Task',
-  state: 'TASK_INBOX',
-  updatedAt: new Date(2018, 0, 1, 9, 0),
-};
-
-const actions = {
-  onTrafficClick: action('onTrafficClick'),
-  onPinTask: action('onPinTask'),
-  onArchiveTask: action('onArchiveTask'),
-};
-
 storiesOf('TrafficContent', module)
-  .add('traffic_content', () => <TrafficContent datas={datas} {...actions} />);
-
-export {task, actions};
+  .add('traffic_content', () => <TrafficContent datas={datas} action={actions} />);
