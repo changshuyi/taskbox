@@ -76,7 +76,7 @@ const DropdownSelect = (items) => (
 );
 
 //用來組織包含其他子元件 -> 這個元件的最上層的容器
-//在這裡面接api
+//看資料組織情況在這裡面接api
 class HotelContent extends Component {
   constructor (props) {
     super(props);
