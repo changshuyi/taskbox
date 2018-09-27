@@ -1,3 +1,4 @@
+/*-------住宿小卡-------------------------------------------------------------------------------------------------------------------------*/
 .hotelBlock .lion{
 	margin-right: 6px;
 }
@@ -162,9 +163,17 @@
 	color: #CCC;
 	margin-right: 4px;
 }
+/*-------交通小卡-------------------------------------------------------------------------------------------------------------------------*/
+.trafficItem{
+	background: url("../img/time_line.png") 20px center no-repeat;
+	padding: 0px 0px 8px 60px;
+	cursor: pointer;
+}
 
-/*i icon -------*/
-
+.trafficItem i.lion {
+	margin-right: 5px;
+}
+/*-------i icon-------------------------------------------------------------------------------------------------------------------------*/
 i.lion.hotel {
 	top: 5px;
 	width: 24px;
@@ -195,4 +204,12 @@ i.lion.detail{
 	height: 16px;
 	background: url("../img/ic_poi_description@2x.png") center center no-repeat;
 	background-size: 16px 16px;
+}
+
+i.lion.car {
+	top: 3px;
+	width: 20px;
+	height: 20px;
+	background: url("../img/ic_directions_car@2x.png") center center no-repeat;
+	background-size: 30px 30px;
 }

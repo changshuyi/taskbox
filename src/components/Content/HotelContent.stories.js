@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 
 import HotelContent from './HotelContent';
 
+//資料
 let datas = {
   "id": 194,
   "name": "星野TOMAMU渡假村",
@@ -72,17 +73,19 @@ let datas = {
   ]
 };
 
-export const task = {
+const task = {
   id: '1',
   title: 'Test Task',
   state: 'TASK_INBOX',
   updatedAt: new Date(2018, 0, 1, 9, 0),
 };
 
-export const actions = {
+const actions = {
   onPinTask: action('onPinTask'),
   onArchiveTask: action('onArchiveTask'),
 };
 
 storiesOf('HotelContent', module)
   .add('hotel_content', () => <HotelContent datas={datas} {...actions} />);
+
+export {task, actions};
