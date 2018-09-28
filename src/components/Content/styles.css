@@ -1,3 +1,14 @@
+.dayList{
+	width: 380px;
+	height:507px;
+	overflow-y: auto;
+	margin-top: 10px;
+	padding-right: 5px;
+	
+}
+.dayList.view{
+	height:452px;
+}
 /*-------住宿小卡-------------------------------------------------------------------------------------------------------------------------*/
 .hotelBlock .lion{
 	margin-right: 6px;
@@ -162,6 +173,219 @@
 .hotelBlock .content .itemInfo.noHotel i.fa{
 	color: #CCC;
 	margin-right: 4px;
+}
+/*-------POI小卡-------------------------------------------------------------------------------------------------------------------------*/
+.dayList .singleItem{
+	position: relative;
+	width: 360px;
+	padding-left: 55px;
+	background-color: #FFF;
+}
+
+.dayList .singleItem .itemBlock{
+	position: relative;
+	border: 1px solid #EEE;
+	border-radius: 5px;
+	padding: 8px 4px 8px 70px;
+	margin-bottom: 5px;
+}
+
+.dayList .singleItem .itemBlock .itemThumbnail{
+	position: absolute;
+	left: 8px;
+	top: 25px;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+}
+.dayList .singleItem .itemBlock .itemThumbnail>img{
+	width: 100%;
+	min-height: 50px;
+}
+
+.dayList .singleItem.restaurant .itemBlock .itemThumbnail{
+	top: 18px;
+}
+
+.dayList .singleItem.airplaneRest .itemBlock .itemThumbnail{
+	top: 6px;
+}
+
+.dayList .singleItem.airplane .itemBlock .itemThumbnail{
+	top: 5px;
+}
+
+.dayList .singleItem.custom .itemBlock .itemThumbnail{
+	top: 5px;
+}
+
+.dayList .singleItem .itemBlock .itemInfo .title{
+	font-size: 12pt;
+	margin-bottom: 10px;
+}
+
+.dayList .singleItem.restaurant .itemBlock .itemInfo .title{
+	margin-bottom: 6px;
+}
+
+.dayList .singleItem.restaurant .itemBlock .itemInfo .time{
+	margin-top: 6px;
+}
+.dayList .singleItem.airplane .itemBlock .itemInfo .title{
+
+	margin-top: 10px;
+	cursor: pointer;
+}
+.dayList .singleItem.airplaneRest .itemBlock .itemInfo .title{
+
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+.dayList .singleItem.custom .itemBlock .itemInfo .info{
+
+	margin-top: 16px;
+}
+
+.dayList .singleItem.custom .itemBlock .itemInfo .info p{
+ 	margin-bottom: 8px;
+ 	font-size: 10pt;
+}
+
+
+.dayList .singleItem .itemBlock .itemInfo .time{
+	color: #333;
+	font-size: 10pt;
+	display: inline-block;
+	margin-right: 12px;
+}
+
+.dayList .singleItem .itemBlock .itemInfo .time .fa{
+	margin-right: 4px;
+}
+
+.dayList .singleItem .itemBlock .itemInfo .time>input{
+	height: 20px;
+	width: 40px;
+	margin-left: 4px;
+}
+
+.dayList .singleItem .itemBlock .toolBar{
+	position: absolute;
+	right: 8px;
+	top: 8px;
+	display: none;
+}
+
+.dayList .singleItem:hover .itemBlock .toolBar, .dayList .singleItem .itemBlock .toolBar.active{
+	display: block;
+}
+
+.dayList .singleItem .itemBlock .toolBar ul{
+	padding: 0px;
+	border-radius: 5px;
+}
+
+.dayList .singleItem .itemBlock .toolBar ul>li{
+	display: inline-block;
+	padding: 0px 0px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #999;
+	background-color: #EEE;
+	cursor: pointer;
+	margin-left: -4px;
+	font-size: 18px;
+}
+
+.dayList .singleItem .itemBlock .toolBar ul>li:hover, .dayList .singleItem .itemBlock .toolBar ul>li.active{
+	color: #ff3366;
+	background-color: #FAFAFA;
+}
+
+.dayList .singleItem .itemBlock .toolBar ul>li.active .lion.like{
+	background: url("../img/ic_like_hover@2x.png") center center no-repeat;
+	background-size: 30px 30px;
+}
+
+.dayList .singleItem .itemBlock .toolBar ul>li:nth-child(1){
+	border-radius: 5px 0px 0px 5px;
+}
+
+.dayList .singleItem .itemBlock .toolBar ul>li:nth-child(3){
+	border-radius: 0px 5px 5px 0px;
+}
+
+.dayList .singleItem .itemBlock .toolBar .dayMoveList{
+	position: absolute;
+	right: 0px;
+	top: 30px;
+	z-index: 501;
+	width: 86px;
+	height: 174px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: #FFF;
+	border-radius: 8px;
+	border: 1px solid #CCC;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+	box-shadow: 0px 0px 5px 0px rgba(155,155,155,0.8);
+	padding: 8px 3px;
+}
+
+.dayList .singleItem .itemBlock .toolBar .dayMoveList .topLabel{
+	color: #999;
+	font-size: 12px;
+	padding-left: 4px;
+}
+
+.dayList .singleItem .itemBlock .toolBar .dayMoveList ul li{
+	display: block;
+	background-color: transparent;
+	color: #000;
+	font-size: 18px;
+	cursor: pointer;
+	width: 70px;
+	padding-left: 8px;
+	text-align: left;
+	height: 35px;
+	line-height: 35px;
+}
+.dayList .singleItem .itemBlock .toolBar .dayMoveList ul li:hover{
+	background-color: #EEE;
+}
+
+
+.dayList .singleItem .itemBlock .detailBtn ul{
+	display: inline-block;
+	padding: 0px;
+}
+
+.dayList .singleItem .itemBlock .detailBtn ul li{
+	display: inline-block;
+	padding: 0px;
+	margin-right: 14px;
+	cursor: pointer;
+}
+
+.dayList .singleItem .itemBlock .detailBtn ul li.fa{
+	margin-right: 4px;
+}
+
+.dayList .singleItem .itemBlock .guideType{
+	display: inline-block;
+}
+
+.dayList .singleItem .itemBlock .guideType>select{
+	height: 20px;
+	width: 120px;
+	border: 1px solid #CCC;
+	border-radius: 0px;
+	background-color: #FFF;
+	margin-left: 4px;
 }
 /*-------交通小卡-------------------------------------------------------------------------------------------------------------------------*/
 .trafficItem{

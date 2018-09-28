@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './styles.css'; 
+import './styles.css';
+
+import { DetailList, DropdownSelect} from '../Base/Items.func';
 
 /**
  * 1.HotelContent 最大區塊 (用來組織包含其他子元件 -> 這個元件的最上層的容器)
  * 2.ImageBlock 圖片區塊 (放到HotelContent中)
  * 3.TitleBlock 標題區塊 (放到HotelContent中)
- * 4.DetailList 放附近、位置、詳情區塊 (放到HotelContent中)
- * 5.DetailItem 附近、位置、詳情 小區塊按鈕 ((放到DetailList中 / 之後拉出來)
- * 6.DropdownSelect 下拉選單區塊 (放到HotelContent中 / 之後拉出來)
+ * 4.DetailList 放附近、位置、詳情區塊 (在Base/Items.func 中)
+ * 5.DetailItem 附近、位置、詳情 小區塊按鈕 ((放到DetailList中 / 或許之後拉出來)
+ * 6.DropdownSelect 下拉選單區塊 (在Base/Items.func 中)
  * 7.動作、共用action (拉到Base.func)
  * 8.css ok
  */
@@ -48,7 +50,7 @@ class ImageBlock extends Component {
   }
 }
 
-const DetailItem = (items) => (
+/*const DetailItem = (items) => (
   <li className={items.icon} onClick={items.onclick.bind(this, items.poiType)}>{items.title}</li>
 );
 
@@ -58,22 +60,21 @@ const DetailList = (items) => (
       items.detailitem.map((item, i) => <DetailItem key={i} title={item.title} icon={item.icon} poiType={item.poiType} onclick={items.onItemClick} />)
     }
   </ul>
-);
+);*/
 
-const DropdownItem = (items) => (
+/*const DropdownItem = (items) => (
   <option value={items.value} data-duration={items.dataduration}>{items.name}</option>
 );
 
 //判斷selected
-/* if(m_itemInfo.guideList[j].id == m_packdata.hotelInfo.guideId){selectStr = "selected";}else{selectStr = "";} */
-
+//if(m_itemInfo.guideList[j].id == m_packdata.hotelInfo.guideId){selectStr = "selected";}else{selectStr = "";} 
 const DropdownSelect = (items) => (
   <select name="mealSelect" disabled={items.disabled}>
     {
       items.dropdownItem.map((item, i) => <DropdownItem key={i} name={item.name} value={item.id} dataduration={item.duration} />)
     }
   </select>
-);
+);*/
 
 //用來組織包含其他子元件 -> 這個元件的最上層的容器
 //看資料組織情況在這裡面接api
