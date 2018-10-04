@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {ScriptCache} from './lib/ScriptCache';
-import GoogleApi from './lib/GoogleApi';
+import {ScriptCache} from '../lib/ScriptCache';
+import GoogleApi from '../lib/GoogleApi';
 
 const defaultMapConfig = {};
 
@@ -10,6 +10,7 @@ const serialize = obj => JSON.stringify(obj);
 const isSame = (obj1, obj2) => obj1 === obj2 || serialize(obj1) === serialize(obj2);
 
 const defaultCreateCache = options => {
+  console.log(options);
   options = options || {};
   const apiKey = options.apiKey;
   const libraries = options.libraries || ['places'];
@@ -18,7 +19,9 @@ const defaultCreateCache = options => {
   const url = options.url;
   const client = options.client;
 
-  return ScriptCache({
+//cache - 瀏覽器從自身的 cache 空間中取得要求的檔案內容、省下至 Server 端撈回檔案內容的這段傳輸成本，不用去 Server 下載、直接從瀏覽器 cache（一般來說會存放在本機的硬碟）會比較快
+//加載google map api
+return ScriptCache({
     google: GoogleApi({
       apiKey: apiKey,
       language: language,

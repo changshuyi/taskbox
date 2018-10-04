@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Map from '../src/index';
 
+import {GoogleApiWrapper} from '../src/index';
+
 const Listing = ({ places }) => (
   <ul>{places && places.map(p => <li key={p.id}>{p.name}</li>)}</ul>
 );
@@ -36,7 +38,7 @@ class Container extends Component {
 
     return (
       <Map
-        className="map"
+        className="gmWrapper"
         google={this.props.google}
         onReady={this.onMapReady}
         visible={false}>
@@ -46,4 +48,13 @@ class Container extends Component {
   }
 }
 
-export default Container;
+const Loading = () => <div>Fancy loading container</div>;
+
+export default 
+  GoogleApiWrapper({
+    apiKey: 'AIzaSyCFWoAaZHwSx-1r9h3EjIwz1LN8e58KVgY',
+    libraries: ['places', 'visualization'],
+    LoadingContainer: Loading
+  })(Container);
+
+//export default Container;

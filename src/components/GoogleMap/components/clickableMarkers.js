@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import Map from '../src/index';
 
+import {GoogleApiWrapper} from '../src/index';
+
 import InfoWindow from '../src/components/InfoWindow';
 import Marker from '../src/components/Marker';
 
@@ -38,7 +40,7 @@ class WithMarkers extends Component {
 
     return (
       <Map
-        className="map"
+        className="gmWrapper"
         google={this.props.google}
         onClick={this.onMapClicked}
         style={{ height: '100%', position: 'relative', width: '100%' }}
@@ -76,4 +78,13 @@ class WithMarkers extends Component {
   }
 }
 
-export default WithMarkers;
+const Loading = () => <div>Fancy loading container</div>;
+
+export default 
+  GoogleApiWrapper({
+    apiKey: 'AIzaSyCFWoAaZHwSx-1r9h3EjIwz1LN8e58KVgY',
+    libraries: ['places', 'visualization'],
+    LoadingContainer: Loading
+  })(WithMarkers);
+
+//export default WithMarkers;

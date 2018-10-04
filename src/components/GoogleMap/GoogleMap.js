@@ -69,22 +69,6 @@ const routes = [
   }
 ];
 
-const createElement = (Component, route) => {
-  // const pathname = props.location.pathname.replace('/', '');
-  // const routeDef = routes[pathname];
-  console.log('createElement');
-  const newProps = {
-    key: route.name,
-    route,
-    routes,
-    // pathname,
-    routeDef: route
-    // routeDef
-  };
-
-  return <Component {...newProps} />;
-};
-
 const Routing = (
   <Router>
     <Container routes={routes} />

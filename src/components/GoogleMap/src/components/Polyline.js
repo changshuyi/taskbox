@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { arePathsEqual } from '../lib/arePathsEqual';
-import { camelize } from '../lib/String';
+import { arePathsEqual } from '../../lib/arePathsEqual';
+import { camelize } from '../../lib/String';
 const evtNames = ['click', 'mouseout', 'mouseover'];
 
 const wrappedPromise = function() {

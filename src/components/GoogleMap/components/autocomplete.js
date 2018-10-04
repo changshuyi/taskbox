@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-
 import Map, { Marker } from '../src/index';
+
+import {GoogleApiWrapper} from '../src/index';
 
 import styles from './autocomplete.module.css';
 
@@ -85,9 +86,18 @@ class Contents extends Component {
 }
 
 const MapWrapper = props => (
-  <Map className="map" google={props.google} visible={false}>
+  <Map className="gmWrapper" google={props.google} visible={false}>
     <Contents {...props} />
   </Map>
 );
 
-export default MapWrapper;
+const Loading = () => <div>Fancy loading container</div>;
+
+export default 
+  GoogleApiWrapper({
+    apiKey: 'AIzaSyCFWoAaZHwSx-1r9h3EjIwz1LN8e58KVgY',
+    libraries: ['places', 'visualization'],
+    LoadingContainer: Loading
+  })(MapWrapper);
+
+//export default MapWrapper;

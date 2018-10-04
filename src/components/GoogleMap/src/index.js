@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
-import {camelize} from './lib/String';
-import {makeCancelable} from './lib/cancelablePromise';
+import {camelize} from '../lib/String';
+import {makeCancelable} from '../lib/cancelablePromise';
 
 const mapStyles = {
   container: {
@@ -49,10 +49,10 @@ export {HeatMap} from './components/HeatMap';
 export {Polygon} from './components/Polygon';
 export {Polyline} from './components/Polyline';
 
-export class Map extends React.Component {
+class Map extends Component {
   constructor(props) {
     super(props);
-
+    console.log(props);
     if (!props.hasOwnProperty('google')) {
       throw new Error('You must include a `google` prop');
     }

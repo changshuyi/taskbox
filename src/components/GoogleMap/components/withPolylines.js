@@ -4,6 +4,8 @@ import Map from '../src/index';
 
 import Polyline from '../src/components/Polyline';
 
+import {GoogleApiWrapper} from '../src/index';
+
 const WithPolylines = props => {
   if (!props.loaded) return <div>Loading...</div>;
 
@@ -15,7 +17,7 @@ const WithPolylines = props => {
 
   return (
     <Map
-      className="map"
+      className="gmWrapper"
       google={props.google}
       style={{ height: '100%', position: 'relative', width: '100%' }}
       zoom={14}>
@@ -31,4 +33,13 @@ const WithPolylines = props => {
   );
 };
 
-export default WithPolylines;
+const Loading = () => <div>Fancy loading container</div>;
+
+export default 
+  GoogleApiWrapper({
+    apiKey: 'AIzaSyCFWoAaZHwSx-1r9h3EjIwz1LN8e58KVgY',
+    libraries: ['places', 'visualization'],
+    LoadingContainer: Loading
+  })(WithPolylines);
+
+//export default WithPolylines;

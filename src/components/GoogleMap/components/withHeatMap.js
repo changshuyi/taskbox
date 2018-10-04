@@ -3,6 +3,8 @@ import React from 'react';
 import Map from '../src/index';
 import HeatMap from '../src/components/HeatMap';
 
+import {GoogleApiWrapper} from '../src/index';
+
 const WithHeatMap = props => {
   if (!props.loaded) return <div>Loading...</div>;
 
@@ -45,7 +47,7 @@ const WithHeatMap = props => {
   return (
     <Map
       google={props.google}
-      className="map"
+      className="gmWrapper"
       style={{ height: '100%', position: 'relative', width: '100%' }}
       zoom={14}>
       <HeatMap
@@ -58,4 +60,13 @@ const WithHeatMap = props => {
   );
 };
 
-export default WithHeatMap;
+const Loading = () => <div>Fancy loading container</div>;
+
+export default 
+  GoogleApiWrapper({
+    apiKey: 'AIzaSyCFWoAaZHwSx-1r9h3EjIwz1LN8e58KVgY',
+    libraries: ['places', 'visualization'],
+    LoadingContainer: Loading
+  })(WithHeatMap);
+
+//export default WithHeatMap;

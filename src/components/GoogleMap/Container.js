@@ -5,12 +5,7 @@ import {withRouter, Switch, Link, Redirect, Route} from 'react-router-dom';
 
 import styles from './styles.module.css';
 
-/*const GoogleApiWrapper = __IS_DEV__
-  ? require('../src/index').GoogleApiWrapper
-  : require('../dist').GoogleApiWrapper;
-*/
-
-const GoogleApiWrapper = require('./src/index').GoogleApiWrapper;
+import {GoogleApiWrapper} from './src/index';
 
 class Container extends Component {
   static propTypes = {};
