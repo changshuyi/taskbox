@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { arePathsEqual } from '../../lib/arePathsEqual';
@@ -18,7 +18,7 @@ const wrappedPromise = function() {
     return wrappedPromise;
 }
 
-export class Polygon extends React.Component {
+class Polygon extends Component {
   componentDidMount() {
     this.polygonPromise = wrappedPromise();
     this.renderPolygon();
