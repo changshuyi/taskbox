@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 import {ScriptCache} from '../lib/ScriptCache';
@@ -10,7 +10,6 @@ const serialize = obj => JSON.stringify(obj);
 const isSame = (obj1, obj2) => obj1 === obj2 || serialize(obj1) === serialize(obj2);
 
 const defaultCreateCache = options => {
-  console.log(options);
   options = options || {};
   const apiKey = options.apiKey;
   const libraries = options.libraries || ['places'];
@@ -36,7 +35,7 @@ return ScriptCache({
 const DefaultLoadingContainer = props => <div>Loading...</div>;
 
 export const wrapper = input => WrappedComponent => {
-  class Wrapper extends React.Component {
+  class Wrapper extends Component {
     constructor(props, context) {
       super(props, context);
 
@@ -54,6 +53,8 @@ export const wrapper = input => WrappedComponent => {
       };
     }
 
+    //更新的流程 props 發生改變時 使用 setState 不會再觸發一次 render
+    //一旦父元件發生改變，子元件的 componentWillReceiveProps 還是會觸發。也就是每次父元件更新，子元件都會重新渲染(Update流程)
     componentWillReceiveProps(props) {
       // Do not update input if it's not dynamic
       if (typeof input !== 'function') {

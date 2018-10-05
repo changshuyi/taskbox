@@ -3,7 +3,8 @@ import React from 'react';
 import Map from '../src/index';
 import HeatMap from '../src/components/HeatMap';
 
-import {GoogleApiWrapper} from '../src/index';
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 const WithHeatMap = props => {
   if (!props.loaded) return <div>Loading...</div>;

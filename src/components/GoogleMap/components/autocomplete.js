@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Map from '../src/index';
 import Marker from '../src/components/Marker';
 
-import {GoogleApiWrapper} from '../src/index';
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 import styles from './autocomplete.module.css';
 

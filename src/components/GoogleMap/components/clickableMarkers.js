@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Map from '../src/index';
 
-import {GoogleApiWrapper} from '../src/index';
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 import InfoWindow from '../src/components/InfoWindow';
 import Marker from '../src/components/Marker';

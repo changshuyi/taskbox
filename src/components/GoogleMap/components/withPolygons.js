@@ -4,7 +4,8 @@ import Map from '../src/index';
 
 import Polygon from '../src/components/Polygon';
 
-import {GoogleApiWrapper} from '../src/index';
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 const WithPolygons = props => {
   if (!props.loaded) return <div>Loading...</div>;

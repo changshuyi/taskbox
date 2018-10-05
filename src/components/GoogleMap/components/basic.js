@@ -1,12 +1,9 @@
-/*
-最基礎的google map
- */
+//最基礎的google map
 
 import React from 'react';
-import Map from '../src/index';
-import {GoogleApiWrapper} from '../src/index';
-
-//const GoogleApiWrapper = require('../src/index').GoogleApiWrapper;
+import Map from '../src/index'; //引入Map的component
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 const Container = props => {
   if (!props.loaded) return <div>Loading...</div>;

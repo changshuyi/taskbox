@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Map from '../src/index';
 
-import {GoogleApiWrapper} from '../src/index';
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 class Container extends Component {
   state = {
