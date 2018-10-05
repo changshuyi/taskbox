@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 import Map from '../src/index';
 
-import {GoogleApiWrapper} from '../src/index';
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 const Listing = ({ places }) => (
   <ul>{places && places.map(p => <li key={p.id}>{p.name}</li>)}</ul>

@@ -1,9 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import ReactDOM from 'react-dom'
-import ReactDOMServer from 'react-dom/server'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import ReactDOMServer from 'react-dom/server';
 
-export class InfoWindow extends React.Component {
+class InfoWindow extends React.Component {
 
   componentDidMount() {
     this.renderInfoWindow();

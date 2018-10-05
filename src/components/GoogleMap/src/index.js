@@ -42,12 +42,12 @@ const evtNames = [
   'zoom_changed'
 ];
 
-export {wrapper as GoogleApiWrapper} from './GoogleApiComponent';
+/*export {wrapper as GoogleApiWrapper} from './GoogleApiComponent';
 export {Marker} from './components/Marker';
 export {InfoWindow} from './components/InfoWindow';
 export {HeatMap} from './components/HeatMap';
 export {Polygon} from './components/Polygon';
-export {Polyline} from './components/Polyline';
+export {Polyline} from './components/Polyline';*/
 
 class Map extends Component {
   constructor(props) {
@@ -66,6 +66,7 @@ class Map extends Component {
     };
   }
 
+  //初始化，第一次 render
   componentDidMount() {
     if (this.props.centerAroundCurrentLocation) {
       if (navigator && navigator.geolocation) {
@@ -91,6 +92,7 @@ class Map extends Component {
     this.loadMap();
   }
 
+  //props、state發生改變時
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.google !== this.props.google) {
       this.loadMap();
@@ -114,6 +116,7 @@ class Map extends Component {
     }
   }
 
+  //元件 unmount 卸載時 (掛載(mount) 理解為『對應』把 a 掛載到 b 上 = 可以把 b 視為 a)
   componentWillUnmount() {
     const {google} = this.props;
     if (this.geoPromise) {

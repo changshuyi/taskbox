@@ -1,3 +1,5 @@
+//https://blog.patw.me/archives/821/talking-about-the-practice-of-third-party-script-cache-to-automatically-upgrade/
+
 let counter = 0;
 let scriptMap = typeof window !== 'undefined' && window._scriptMap || new Map();
 const window = require('./windowOrGlobal');

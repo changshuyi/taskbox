@@ -4,7 +4,8 @@ import Map from '../src/index';
 
 import Polyline from '../src/components/Polyline';
 
-import {GoogleApiWrapper} from '../src/index';
+//import {GoogleApiWrapper} from '../src/index';
+import GoogleApiWrapper from '../src/GoogleApiComponent';
 
 const WithPolylines = props => {
   if (!props.loaded) return <div>Loading...</div>;

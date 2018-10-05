@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { arePathsEqual } from '../../lib/arePathsEqual';
@@ -19,7 +19,7 @@ const wrappedPromise = function() {
     return wrappedPromise;
 }
 
-export class Polyline extends React.Component {
+class Polyline extends Component {
   componentDidMount() {
     this.polylinePromise = wrappedPromise();
     this.renderPolyline();

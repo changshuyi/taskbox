@@ -1,7 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import { camelize } from '../../lib/String'
+import { camelize } from '../../lib/String';
 const evtNames = ['click', 'mouseover', 'recenter'];
 
 const wrappedPromise = function() {
@@ -17,7 +17,7 @@ const wrappedPromise = function() {
     return wrappedPromise;
 }
 
-export class HeatMap extends React.Component {
+class HeatMap extends Component {
 
   componentDidMount() {
     this.heatMapPromise = wrappedPromise();
@@ -113,4 +113,4 @@ HeatMap.defaultProps = {
   name: 'HeatMap'
 }
 
-export default HeatMap
+export default HeatMap;
