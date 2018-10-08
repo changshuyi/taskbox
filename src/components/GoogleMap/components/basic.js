@@ -14,13 +14,14 @@ const Container = props => {
       className="gmWrapper"
       google={props.google}
       style={{ height: '100%', position: 'relative', width: '100%' }}
-      zoom={14}
+      zoom={13}
     />
   );
 };
 
 const Loading = () => <div>Fancy loading container</div>;
 
+//透過GoogleApiWrapper export
 export default 
   GoogleApiWrapper({
     apiKey: 'AIzaSyCFWoAaZHwSx-1r9h3EjIwz1LN8e58KVgY',

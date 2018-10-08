@@ -52,7 +52,6 @@ export {Polyline} from './components/Polyline';*/
 class Map extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
     if (!props.hasOwnProperty('google')) {
       throw new Error('You must include a `google` prop');
     }
@@ -94,6 +93,8 @@ class Map extends Component {
 
   //props、state發生改變時
   componentDidUpdate(prevProps, prevState) {
+    console.log(prevProps);
+    console.log(prevState);
     if (prevProps.google !== this.props.google) {
       this.loadMap();
     }
@@ -299,10 +300,10 @@ Map.propTypes = {
 evtNames.forEach(e => (Map.propTypes[camelize(e)] = PropTypes.func));
 
 Map.defaultProps = {
-  zoom: 14,
+  zoom: 13,
   initialCenter: {
-    lat: 37.774929,
-    lng: -122.419416
+    lat: 24,
+    lng: 121
   },
   center: {},
   centerAroundCurrentLocation: false,

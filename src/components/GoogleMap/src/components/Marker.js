@@ -29,11 +29,13 @@ const wrappedPromise = function() {
 
 class Marker extends Component {
 
+  //Mounting
   componentDidMount() {
     this.markerPromise = wrappedPromise();
     this.renderMarker();
   }
 
+  //Updating
   componentDidUpdate(prevProps) {
     if ((this.props.map !== prevProps.map) ||
       (this.props.position !== prevProps.position) ||
@@ -45,6 +47,7 @@ class Marker extends Component {
     }
   }
 
+  //Unmounting
   componentWillUnmount() {
     if (this.marker) {
       this.marker.setMap(null);
@@ -66,7 +69,9 @@ class Marker extends Component {
     if (!google) {
       return null
     }
-
+    //console.log(this.props);
+    //console.log(position);
+    
     let pos = position || mapCenter;
     if (!(pos instanceof google.maps.LatLng)) {
       pos = new google.maps.LatLng(pos.lat, pos.lng);
@@ -119,4 +124,4 @@ Marker.defaultProps = {
   name: 'Marker'
 }
 
-export default Marker
+export default Marker;

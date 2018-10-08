@@ -38,7 +38,8 @@ export const wrapper = input => WrappedComponent => {
   class Wrapper extends Component {
     constructor(props, context) {
       super(props, context);
-
+      console.log(props);
+      console.log(context);
       // Build options from input
       const options = typeof input === 'function' ? input(props) : input;
 

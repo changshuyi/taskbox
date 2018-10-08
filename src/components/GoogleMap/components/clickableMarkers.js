@@ -45,34 +45,26 @@ class WithMarkers extends Component {
         google={this.props.google}
         onClick={this.onMapClicked}
         style={{ height: '100%', position: 'relative', width: '100%' }}
-        zoom={14}>
-        <Marker
-          name="SOMA"
-          onClick={this.onMarkerClick}
-          position={{ lat: 37.778519, lng: -122.40564 }}
-        />
+        zoom={13}
+        initialCenter={this.props.points[0]}>
 
-        <Marker
-          name="Dolores park"
-          onClick={this.onMarkerClick}
-          position={{ lat: 37.759703, lng: -122.428093 }}
-        />
-
-        <Marker name="Current location" onClick={this.onMarkerClick} />
-
+        { this.props.points.map((item, i) => 
+          <Marker
+            key={'points_' + i}
+            name={'points' + i}
+            position={item}
+            onClick={this.onMarkerClick}
+            title=""
+          />)
+        }
+        {/*position={}*/}
         <InfoWindow
           marker={this.state.activeMarker}
           onClose={this.onInfoWindowClose}
           visible={this.state.showingInfoWindow}>
           <div>
-            <h1>{this.state.selectedPlace.name}</h1>
+            <small>{this.state.selectedPlace.name}</small>
           </div>
-        </InfoWindow>
-
-        <InfoWindow position={{ lat: 37.765703, lng: -122.42564 }} visible>
-          <small>
-            Click on any of the markers to display an additional info.
-          </small>
         </InfoWindow>
       </Map>
     );
