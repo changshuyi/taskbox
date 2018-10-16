@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TrafficContent from './TrafficContent';
-import trafficdemodatas from './trafficdemodatas'
+import trafficdemodatas from './demodatas/trafficdemodatas'
 import { task, actions } from '../Base/Base.func';
 
 let datas = trafficdemodatas;

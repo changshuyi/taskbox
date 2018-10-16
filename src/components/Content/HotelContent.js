@@ -15,21 +15,6 @@ import { DetailList, DropdownSelect} from '../Base/Items.func';
  * 8.css ok
  */
 
- /**
-  *<div class="hotelBlock active">
-								<div class="title" onclick="toggleHotel(this)"><i class="lion hotel"></i> 星野TOMAMU渡假村</div>
-								<div class="content">
-                  <div class="itemInfo hotelInfo">	
-                  <div class="itemThumbnail">		<img src="https://photopdm.liontravel.com/194/星野渡假村.jpg">	</div>	
-                  <div class="title">星野TOMAMU渡假村</div>	
-                  <div class="detailBtn singleItem" data-pid="1_194">		
-                  <ul>			<li onclick="rightBlockSwitch('poiMap', this)"><i class="lion location"></i>附近</li>			<li onclick="rightBlockSwitch('poiMap', this)"><i class="lion map"></i>位置</li>			<li onclick="rightBlockSwitch('poiDetail', this)"><i class="lion detail"></i>詳情</li>		</ul>	</div>	
-                  <div class="mealType">		<select name="mealSelect" disabled="">     <option value="123" data-duration="480.0 selected">住宿-一泊二食</option>     <option value="2271" data-duration="60.0 ">付費體驗活動-雪上活動</option>     <option value="26949" data-duration="150.0 ">付費體驗活動-滑雪(教練教學)</option>		</select>	</div></div>
-
-								</div>
-							</div> 
-  */
-
 class TitleBlock extends Component {
   render(){
     return (
@@ -76,6 +61,17 @@ const DropdownSelect = (items) => (
   </select>
 );*/
 
+const queue = []; 
+const enqueueSetState = (stateChange) => {
+  queue.map(function(items){
+      queue.shift();
+  });
+  queue.push(stateChange);
+  console.log(queue);
+} 
+
+//非同步 - 先給基本的資料，點擊開來才去問內容
+
 //用來組織包含其他子元件 -> 這個元件的最上層的容器
 //看資料組織情況在這裡面接api
 class HotelContent extends Component {
@@ -84,6 +80,8 @@ class HotelContent extends Component {
     console.log(props);
     this.state = {
       activeBlock: false, //展開、關閉
+      thumbnail: '',
+      titlename: '',
       detailitem: [
         {
           title:"附近",
@@ -103,11 +101,31 @@ class HotelContent extends Component {
       ]
     };
   }
-
+  
   toggleHotel = () => {
     this.setState({
-      activeBlock: !this.state.activeBlock
+      activeBlock: !this.state.activeBlock,
+      thumbnail: this.handleServerItemsLoad()
     });
+  }
+
+  handleServerItemsLoad = () => {
+    let testimg = 'https://images.unsplash.com/photo-1539445311376-308896b96da4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98a7a94c03bc65a6728b8a9c6505c1a2&auto=format&fit=crop&w=1600&q=80';
+    enqueueSetState({thumbnail: testimg});
+    
+    return testimg;
+   
+    /*fetch('', {
+            method: 'GET'
+        }).then((response) => {
+            //ok 代表狀態碼在範圍 200-299
+            if (!response.ok) throw new Error(response.statusText)
+            return response.json();
+    }).then((items) => {
+      //setState
+    }).catch((error) => {
+        //console.error(error)
+    });*/
   }
 
   render(){
@@ -116,13 +134,13 @@ class HotelContent extends Component {
           <div className="title" onClick={this.toggleHotel}>{this.props.datas.name}</div>
           <div className="content">
             <div className="itemInfo hotelInfo">
-              <ImageBlock img={this.props.datas.thumbnail[0].img} />
+              <ImageBlock img={this.state.thumbnail} />
               <TitleBlock titlename={this.props.datas.name} />
               <div className="detailBtn singleItem" data-pid={this.props.datas.key}>
                 <DetailList detailitem={this.state.detailitem} onItemClick={this.props.action.onRightBlockSwitch}/>
               </div>
               {
-                this.props.datas.guideList.length > 0 ? <DropdownSelect dropdownItem={this.props.datas.guideList}/> : '' /** disabled的判斷 等有api時再放*/
+                this.props.datas.guideList.length > 0 ? <DropdownSelect dropdownItem={this.props.datas.guideList} dropdownName="mealSelect"/> : '' /** disabled的判斷 等有api時再放*/
               }
             </div>
           </div>
@@ -138,8 +156,6 @@ HotelContent.defaultProps = {
 HotelContent.propTypes = {
   onTrafficClick: PropTypes.func,
   onRightBlockSwitch: PropTypes.func,
-  onPinTask: PropTypes.func,
-  onArchiveTask: PropTypes.func,
 };
 
 export default HotelContent;

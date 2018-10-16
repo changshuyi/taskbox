@@ -20,7 +20,7 @@ const DropdownItem = (items) => (
 //判斷selected
 /* if(m_itemInfo.guideList[j].id == m_packdata.hotelInfo.guideId){selectStr = "selected";}else{selectStr = "";} */
 const DropdownSelect = (items) => (
-  <select name="mealSelect" disabled={items.disabled}>
+  <select name={items.dropdownName} disabled={items.disabled}>
     {
       items.dropdownItem.map((item, i) => <DropdownItem key={i} name={item.name} value={item.id} dataduration={item.duration} />)
     }

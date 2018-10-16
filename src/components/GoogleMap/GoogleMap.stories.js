@@ -2,7 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 
-import GoogleMap from './GoogleMap';
+//import GoogleMap from './GoogleMap';
+import mapdemodatas from './mapdemodatas.json';
 
 import Simple from './components/basic';
 import Marker from './components/withMarkers';
@@ -20,7 +21,7 @@ import IcPOILocation from'../img/ic_poi_location.png'; //1
 import IcLocationAirport from'../img/ic_location_airport.png'; //2
 import IcLocationMap2 from'../img/ic_location_map2.png'; //3
 
-let datas = {};
+let datas = mapdemodatas;
 
 let points = [
   {lat:43.063569, lng:142.631352},
@@ -33,18 +34,18 @@ let points = [
   {lat:44.038149, lng:144.935476}
 ];
 
-//imageStyle (可能從stories來)
+//imageStyle
 var imageStyleArray = [POINearbyLocation, IcPOILocation, IcLocationAirport, IcLocationMap2];
-var markerImageUrl =  imageStyleArray[0]
+var markerImageUrl =  imageStyleArray[0];
 
 storiesOf('GoogleMap', module)
-  .add('google_map', () => <GoogleMap datas={datas} />)
+  //.add('google_map', () => <GoogleMap datas={datas} />)
   .add('simple', () => <Simple datas={datas} />)
   .add('marker', () => <Marker datas={datas} points={points} markerImageUrl={markerImageUrl}/>)
-  .add('clickable_markers', () => <ClickableMarkers datas={datas} points={points} />)
-  .add('google_places', () => <GooglePlaces datas={datas} />)
+  .add('clickable_markers', () => <ClickableMarkers datas={datas} points={points}/>)
+  .add('google_places', () => <GooglePlaces datas={datas} points={points}/>)
   .add('autocomplete', () => <Autocomplete datas={datas} />)
-  .add('heat_map', () => <HeatMap datas={datas} />)
-  .add('polygon', () => <Polygon datas={datas} />)
-  .add('polyline', () => <Polyline datas={datas} />)
-  .add('custom_events', () => <CustomEvents datas={datas} />);
+  .add('heat_map', () => <HeatMap datas={datas} points={points}/>)
+  .add('polygon', () => <Polygon datas={datas} points={points}/>)
+  .add('polyline', () => <Polyline datas={datas} points={points}/>)
+  .add('custom_events', () => <CustomEvents datas={datas} points={points}/>);

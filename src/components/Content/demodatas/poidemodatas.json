@@ -1,0 +1,50 @@
+{
+  "category": "4",
+  "id": "1166",
+  "starttime": "0830",
+  "endtime": "0930",
+  "packageType": null,
+  "name": "別府海地獄",
+  "thumbnail": "https://updmexapi.api.liontravel.com/photo/120.jpg",
+  "isFavorite": false,
+  "mode": "1",
+  "duration": 60,
+  "nowGuide": "1237",
+  "startLongitude": 131.469019,
+  "startLatitude": 33.316036,
+  "endLongitude": 131.469019,
+  "endLatitude": 33.316036,
+  "guideList": [
+    {
+      "id": "1237",
+      "name": "參觀(含門票)",
+      "duration": 1,
+      "brief": "所謂的「地獄」是別府著名的九個溫泉，這些皆為景觀溫泉，溫度非常高，不能供人泡湯使用。以血地獄及海地獄最為著名，「海地獄」的命名，是因為這一池熱騰騰的溫泉顯現出美麗的淺藍色。來到這裡發現溫泉的種類很多，溫度及泉質也不一樣，且特別的藍色溫泉讓人不禁增添一份神秘感。"
+    }
+  ],
+  "poiList": null,
+  "title": null,
+  "addr": null,
+  "astarttime": null,
+  "aendtime": null,
+  "dispatch": 0,
+  "contact": null,
+  "phone": null,
+  "desc": null,
+  "type": "poi",
+  "off": null,
+  "location": {
+    "latitude": 33.316036,
+    "longitude": 131.469019
+  },
+  "pid": "1_1166",
+  "guideId": "1237",
+  "nowGuideInfo": {
+    "id": "1237",
+    "name": "參觀(含門票)",
+    "duration": 1,
+    "brief": "所謂的「地獄」是別府著名的九個溫泉，這些皆為景觀溫泉，溫度非常高，不能供人泡湯使用。以血地獄及海地獄最為著名，「海地獄」的命名，是因為這一池熱騰騰的溫泉顯現出美麗的淺藍色。來到這裡發現溫泉的種類很多，溫度及泉質也不一樣，且特別的藍色溫泉讓人不禁增添一份神秘感。"
+  },
+  "latitude": 33.316036,
+  "longitude": 131.469019
+}

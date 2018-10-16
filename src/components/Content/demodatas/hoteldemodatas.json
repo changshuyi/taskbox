@@ -1,0 +1,229 @@
+{
+  "id": 6068,
+  "name": "別府灣皇家溫泉飯店",
+  "en_name": "Beppu Bay Royal Hotel",
+  "isFavorite": false,
+  "latitude": "33.356090",
+  "longitude": "131.498515",
+  "address": "日本 〒879-1508 大分縣速見郡日出町大字平道字入江1825",
+  "phone": "81977729800",
+  "time": "00:00-24:00",
+  "img": [
+    {
+      "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+    }
+  ],
+  "guideList": [
+    {
+      "id": 5660,
+      "name": "住宿-住宿含早",
+      "serviceTimeStart": "1700",
+      "serviceTimeEnd": "0900",
+      "duration": "480.0",
+      "brief": "別府灣皇家度假村飯店，面對著別府灣，飯店所在地日出町，每天總是飄散著海潮香與溫泉香，讓身處其中的每個人，有回到家的安心與舒適，號稱天下名湯的別府，有分具特色的八處溫泉迎賓，溫泉造成的奇觀，望之有如。",
+      "startLongitude": "131.498515",
+      "startLatitude": "33.356090",
+      "endLongitude": "131.498515",
+      "endLatitude": "33.356090",
+      "startCity": "日出町",
+      "endCity": "日出町"
+    },
+    {
+      "id": 32690,
+      "name": "住宿-一泊二食",
+      "serviceTimeStart": "1700",
+      "serviceTimeEnd": "0900",
+      "duration": "480.0",
+      "brief": "別府灣皇家度假村飯店，面對著別府灣，飯店所在地日出町，每天總是飄散著海潮香與溫泉香，讓身處其中的每個人，有回到家的安心與舒適，號稱天下名湯的別府，有分具特色的八處溫泉迎賓，溫泉造成的奇觀，望之有如。",
+      "startLongitude": "131.498515",
+      "startLatitude": "33.356090",
+      "endLongitude": "131.498515",
+      "endLatitude": "33.356090",
+      "startCity": "日出町",
+      "endCity": "日出町"
+    }
+  ],
+  "relativePoi": [
+    {
+      "id": 957,
+      "name": "季之鄉山之湯溫泉飯店",
+      "isFavorite": false,
+      "cityId": "C202000432",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 1000,
+          "name": "住宿-一泊二食"
+        }
+      ],
+      "key": "1_957"
+    },
+    {
+      "id": 5299,
+      "name": "阿蘇之司",
+      "isFavorite": false,
+      "cityId": "C202000193",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 5707,
+          "name": "住宿-住宿含早"
+        }
+      ],
+      "key": "1_5299"
+    },
+    {
+      "id": 5300,
+      "name": "阿蘇GRANDVRIO",
+      "isFavorite": false,
+      "cityId": "C202000193",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 5708,
+          "name": "住宿-住宿含早"
+        },
+        {
+          "id": 32394,
+          "name": "住宿-一泊二食-(晚餐:和洋式自助餐+長腳蟹料理)"
+        }
+      ],
+      "key": "1_5300"
+    },
+    {
+      "id": 5305,
+      "name": "別府HOTEL NEW TSURUTA",
+      "isFavorite": false,
+      "cityId": "C202000388",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 5595,
+          "name": "住宿-住宿含早"
+        }
+      ],
+      "key": "1_5305"
+    },
+    {
+      "id": 5307,
+      "name": "別府龜之井溫泉飯店",
+      "isFavorite": false,
+      "cityId": "C202000388",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 5594,
+          "name": "住宿-住宿含早"
+        }
+      ],
+      "key": "1_5307"
+    },
+    {
+      "id": 5310,
+      "name": "別府PASTORAL",
+      "isFavorite": false,
+      "cityId": "C202000388",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 5711,
+          "name": "住宿-住宿含早"
+        }
+      ],
+      "key": "1_5310"
+    },
+    {
+      "id": 6069,
+      "name": "別府溫泉清風飯店",
+      "isFavorite": false,
+      "cityId": "C202000388",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 5661,
+          "name": "住宿-住宿含早"
+        }
+      ],
+      "key": "1_6069"
+    },
+    {
+      "id": 6878,
+      "name": "大江戸温泉物語 別府清風",
+      "isFavorite": false,
+      "cityId": "C202000388",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 6945,
+          "name": "住宿-一泊二食"
+        }
+      ],
+      "key": "1_6878"
+    },
+    {
+      "id": 7108,
+      "name": "天瀨溫泉Sun Village",
+      "isFavorite": false,
+      "cityId": "C202000398",
+      "thumbnail": [
+        {
+          "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+        }
+      ],
+      "categoryId": 2,
+      "guideList": [
+        {
+          "id": 6740,
+          "name": "住宿-住宿含早"
+        }
+      ],
+      "key": "1_7108"
+    }
+  ],
+  "key": "1_6068",
+  "thumbnail": [
+    {
+      "img": "https://updmexapi.api.liontravel.com/photo/120.jpg"
+    }
+  ]
+}

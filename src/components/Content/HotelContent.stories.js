@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import HotelContent from './HotelContent';
-import hoteldemodatas from './hoteldemodatas';
+import hoteldemodatas from './demodatas/hoteldemodatas';
 import { task, actions } from '../Base/Base.func';
 
 //資料

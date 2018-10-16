@@ -21,7 +21,8 @@ const WithPolygons = props => {
       google={props.google}
       className="gmWrapper"
       style={{ height: '100%', position: 'relative', width: '100%' }}
-      zoom={14}>
+      zoom={13}
+      initialCenter={props.points[0]}>
       <Polygon
         fillColor="#0000FF"
         fillOpacity={0.35}

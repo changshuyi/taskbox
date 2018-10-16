@@ -175,14 +175,14 @@
 	margin-right: 4px;
 }
 /*-------POI小卡-------------------------------------------------------------------------------------------------------------------------*/
-.dayList .singleItem{
+.singleItem{
 	position: relative;
 	width: 360px;
 	padding-left: 55px;
 	background-color: #FFF;
 }
 
-.dayList .singleItem .itemBlock{
+.singleItem .itemBlock{
 	position: relative;
 	border: 1px solid #EEE;
 	border-radius: 5px;
@@ -190,7 +190,7 @@
 	margin-bottom: 5px;
 }
 
-.dayList .singleItem .itemBlock .itemThumbnail{
+.singleItem .itemBlock .itemThumbnail{
 	position: absolute;
 	left: 8px;
 	top: 25px;
@@ -198,95 +198,93 @@
 	height: 50px;
 	overflow: hidden;
 }
-.dayList .singleItem .itemBlock .itemThumbnail>img{
+.singleItem .itemBlock .itemThumbnail>img{
 	width: 100%;
 	min-height: 50px;
 }
 
-.dayList .singleItem.restaurant .itemBlock .itemThumbnail{
+.singleItem.restaurant .itemBlock .itemThumbnail{
 	top: 18px;
 }
 
-.dayList .singleItem.airplaneRest .itemBlock .itemThumbnail{
+.singleItem.airplaneRest .itemBlock .itemThumbnail{
 	top: 6px;
 }
 
-.dayList .singleItem.airplane .itemBlock .itemThumbnail{
+.singleItem.airplane .itemBlock .itemThumbnail{
 	top: 5px;
 }
 
-.dayList .singleItem.custom .itemBlock .itemThumbnail{
+.singleItem.custom .itemBlock .itemThumbnail{
 	top: 5px;
 }
 
-.dayList .singleItem .itemBlock .itemInfo .title{
+.singleItem .itemBlock .itemInfo .title{
 	font-size: 12pt;
 	margin-bottom: 10px;
 }
 
-.dayList .singleItem.restaurant .itemBlock .itemInfo .title{
+.singleItem.restaurant .itemBlock .itemInfo .title{
 	margin-bottom: 6px;
 }
 
-.dayList .singleItem.restaurant .itemBlock .itemInfo .time{
+.singleItem.restaurant .itemBlock .itemInfo .time{
 	margin-top: 6px;
 }
-.dayList .singleItem.airplane .itemBlock .itemInfo .title{
 
+.singleItem.airplane .itemBlock .itemInfo .title{
 	margin-top: 10px;
 	cursor: pointer;
 }
-.dayList .singleItem.airplaneRest .itemBlock .itemInfo .title{
 
+.singleItem.airplaneRest .itemBlock .itemInfo .title{
 	margin-top: 16px;
 	margin-bottom: 16px;
 }
 
-.dayList .singleItem.custom .itemBlock .itemInfo .info{
-
+.singleItem.custom .itemBlock .itemInfo .info{
 	margin-top: 16px;
 }
 
-.dayList .singleItem.custom .itemBlock .itemInfo .info p{
+.singleItem.custom .itemBlock .itemInfo .info p{
  	margin-bottom: 8px;
  	font-size: 10pt;
 }
 
-
-.dayList .singleItem .itemBlock .itemInfo .time{
+.singleItem .itemBlock .itemInfo .time{
 	color: #333;
 	font-size: 10pt;
 	display: inline-block;
 	margin-right: 12px;
 }
 
-.dayList .singleItem .itemBlock .itemInfo .time .fa{
+.singleItem .itemBlock .itemInfo .time .fa{
 	margin-right: 4px;
 }
 
-.dayList .singleItem .itemBlock .itemInfo .time>input{
+.singleItem .itemBlock .itemInfo .time>input{
 	height: 20px;
 	width: 40px;
 	margin-left: 4px;
 }
 
-.dayList .singleItem .itemBlock .toolBar{
+.singleItem .itemBlock .toolBar{
 	position: absolute;
 	right: 8px;
 	top: 8px;
 	display: none;
 }
 
-.dayList .singleItem:hover .itemBlock .toolBar, .dayList .singleItem .itemBlock .toolBar.active{
+.singleItem:hover .itemBlock .toolBar, .singleItem .itemBlock .toolBar.active{
 	display: block;
 }
 
-.dayList .singleItem .itemBlock .toolBar ul{
+.singleItem .itemBlock .toolBar ul{
 	padding: 0px;
 	border-radius: 5px;
 }
 
-.dayList .singleItem .itemBlock .toolBar ul>li{
+.singleItem .itemBlock .toolBar ul>li{
 	display: inline-block;
 	padding: 0px 0px;
 	width: 30px;
@@ -300,25 +298,25 @@
 	font-size: 18px;
 }
 
-.dayList .singleItem .itemBlock .toolBar ul>li:hover, .dayList .singleItem .itemBlock .toolBar ul>li.active{
+.singleItem .itemBlock .toolBar ul>li:hover, .singleItem .itemBlock .toolBar ul>li.active{
 	color: #ff3366;
 	background-color: #FAFAFA;
 }
 
-.dayList .singleItem .itemBlock .toolBar ul>li.active .lion.like{
+.singleItem .itemBlock .toolBar ul>li.active .lion.like{
 	background: url("../img/ic_like_hover@2x.png") center center no-repeat;
 	background-size: 30px 30px;
 }
 
-.dayList .singleItem .itemBlock .toolBar ul>li:nth-child(1){
+.singleItem .itemBlock .toolBar ul>li:nth-child(1){
 	border-radius: 5px 0px 0px 5px;
 }
 
-.dayList .singleItem .itemBlock .toolBar ul>li:nth-child(3){
+.singleItem .itemBlock .toolBar ul>li:nth-child(3){
 	border-radius: 0px 5px 5px 0px;
 }
 
-.dayList .singleItem .itemBlock .toolBar .dayMoveList{
+.singleItem .itemBlock .toolBar .dayMoveList{
 	position: absolute;
 	right: 0px;
 	top: 30px;
@@ -336,13 +334,13 @@
 	padding: 8px 3px;
 }
 
-.dayList .singleItem .itemBlock .toolBar .dayMoveList .topLabel{
+.singleItem .itemBlock .toolBar .dayMoveList .topLabel{
 	color: #999;
 	font-size: 12px;
 	padding-left: 4px;
 }
 
-.dayList .singleItem .itemBlock .toolBar .dayMoveList ul li{
+.singleItem .itemBlock .toolBar .dayMoveList ul li{
 	display: block;
 	background-color: transparent;
 	color: #000;
@@ -354,32 +352,31 @@
 	height: 35px;
 	line-height: 35px;
 }
-.dayList .singleItem .itemBlock .toolBar .dayMoveList ul li:hover{
+.singleItem .itemBlock .toolBar .dayMoveList ul li:hover{
 	background-color: #EEE;
 }
 
-
-.dayList .singleItem .itemBlock .detailBtn ul{
+.singleItem .itemBlock .detailBtn ul{
 	display: inline-block;
 	padding: 0px;
 }
 
-.dayList .singleItem .itemBlock .detailBtn ul li{
+.singleItem .itemBlock .detailBtn ul li{
 	display: inline-block;
 	padding: 0px;
 	margin-right: 14px;
 	cursor: pointer;
 }
 
-.dayList .singleItem .itemBlock .detailBtn ul li.fa{
+.singleItem .itemBlock .detailBtn ul li.fa{
 	margin-right: 4px;
 }
 
-.dayList .singleItem .itemBlock .guideType{
+.singleItem .itemBlock .guideType{
 	display: inline-block;
 }
 
-.dayList .singleItem .itemBlock .guideType>select{
+.singleItem .itemBlock .guideType>select{
 	height: 20px;
 	width: 120px;
 	border: 1px solid #CCC;
@@ -387,6 +384,7 @@
 	background-color: #FFF;
 	margin-left: 4px;
 }
+
 /*-------交通小卡-------------------------------------------------------------------------------------------------------------------------*/
 .trafficItem{
 	background: url("../img/time_line.png") 20px center no-repeat;
@@ -436,4 +434,20 @@ i.lion.car {
 	height: 20px;
 	background: url("../img/ic_directions_car@2x.png") center center no-repeat;
 	background-size: 30px 30px;
+}
+
+i.lion.clock {
+	top: 3px;
+	width: 15px;
+	height: 16px;
+	background: url("../img/ic_time@2x.png") center center no-repeat;
+	background-size: 15px 16px;
+}
+
+i.lion.bag {
+	top: 4px;
+	width: 18px;
+	height: 17px;
+	background: url("../img/ic_travel@2x.png") center center no-repeat;
+	background-size: 18px 17px;
 }
