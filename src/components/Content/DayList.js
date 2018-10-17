@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import POIContent from './POIContent';
+import poidemodatas from './demodatas/poidemodatas';
+
 class DayList extends Component {
   constructor (props) {
     super(props);
@@ -11,7 +14,9 @@ class DayList extends Component {
   
   render(){
     return(
-        <div></div>
+        <div className="dayList view">
+          <POIContent datas={poidemodatas} actions={this.props.actions} />
+        </div>
     )
   }
 }

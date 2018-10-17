@@ -9,6 +9,103 @@
 .dayList.view{
 	height:452px;
 }
+/*-------Itinerary Block中放標題、日期、summary-------------------------------------------------------------------------------------------------------------------------*/
+.dayInfo{
+	position: relative;
+	padding-left: 50px;
+
+}
+
+.dayInfo .dayInfoEditBtn{
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	width: 150px;
+	height: 40px;
+}
+
+.dayInfo .dayInfoEditBtn > i{
+	display: block;
+	float: right;
+	width: 30px;
+	height: 30px;
+	background: url(../img/ic_cardedit@2x.png);
+	background-size: 30px 30px;
+}
+
+.dayInfo .dayInfoEditBtn:hover .dayInfoEditorList{
+	display: block;
+
+}
+
+.dayInfo .dayInfoEditBtn .dayInfoEditorList{
+	display: none;
+	position: absolute;
+	right: 0px;
+	top: 31px;
+	z-index: 501;
+	width: 130px;
+	background-color: #FFF;
+	border-radius: 8px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+	box-shadow: 0px 0px 5px 0px rgba(155,155,155,0.8);
+	padding: 0px 0px;
+}
+
+.dayInfo .dayInfoEditBtn .dayInfoEditorList li{
+	width: 100%;
+	display: block;
+	background-color: transparent;
+	color: #000;
+	padding: 8px 5px;
+	font-size: 18px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.dayInfo .dayInfoEditBtn .dayInfoEditorList li:last-child{
+	border-top: 3px solid #CCC;
+}
+
+.dayInfo .dayNum{
+	position: absolute;
+	left: 0px;
+	top: 6px;
+	display: block;
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	font-size: 12pt;
+	background-color: #ff6633;
+	color: #FFF;
+	border-radius: 18px;
+}
+
+.dayInfo .dayTitle{
+	font-size: 14pt;
+}
+
+.dayInfo .summary{
+	font-size: 13pt;
+	min-height: 24px;
+}
+
+.dayInfo .dayTitle .timezone{
+	position: relative;
+	top: -3px;
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 10pt;
+	background-color: #EEE;
+	margin-left: 15px;
+	border-radius: 5px;
+	text-align: center;
+}
+
 /*-------住宿小卡-------------------------------------------------------------------------------------------------------------------------*/
 .hotelBlock .lion{
 	margin-right: 6px;

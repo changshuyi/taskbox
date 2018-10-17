@@ -70,14 +70,14 @@ class POIContent extends Component {
   
   render(){
     return(
-      <div className="singleItem">
+      <div className="singleItem poi">
         <div className="itemBlock">
           <ImageBlock img={this.props.datas.thumbnail} />
           <TitleBlock titlename={this.props.datas.name} />
           <div className="detailBtn" data-pid={this.props.datas.key}>
-            <DetailList detailitem={this.state.detailitem} onItemClick={this.props.action.onRightBlockSwitch}/>
+            <DetailList detailitem={this.state.detailitem} onItemClick={this.props.actions.onRightBlockSwitch}/>
           </div>
-          <TimeBlock value={this.props.action.durationToTime(this.props.datas.duration)} />
+          <TimeBlock value={this.props.actions.durationToTime(this.props.datas.duration)} />
           <div className="guideType">
             <i className="lion bag"></i>
             {

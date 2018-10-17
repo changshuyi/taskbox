@@ -61,17 +61,6 @@ const DropdownSelect = (items) => (
   </select>
 );*/
 
-const queue = []; 
-const enqueueSetState = (stateChange) => {
-  queue.map(function(items){
-      queue.shift();
-  });
-  queue.push(stateChange);
-  console.log(queue);
-} 
-
-//非同步 - 先給基本的資料，點擊開來才去問內容
-
 //用來組織包含其他子元件 -> 這個元件的最上層的容器
 //看資料組織情況在這裡面接api
 class HotelContent extends Component {
@@ -80,8 +69,6 @@ class HotelContent extends Component {
     console.log(props);
     this.state = {
       activeBlock: false, //展開、關閉
-      thumbnail: '',
-      titlename: '',
       detailitem: [
         {
           title:"附近",
@@ -104,17 +91,11 @@ class HotelContent extends Component {
   
   toggleHotel = () => {
     this.setState({
-      activeBlock: !this.state.activeBlock,
-      thumbnail: this.handleServerItemsLoad()
+      activeBlock: !this.state.activeBlock
     });
   }
 
   handleServerItemsLoad = () => {
-    let testimg = 'https://images.unsplash.com/photo-1539445311376-308896b96da4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98a7a94c03bc65a6728b8a9c6505c1a2&auto=format&fit=crop&w=1600&q=80';
-    enqueueSetState({thumbnail: testimg});
-    
-    return testimg;
-   
     /*fetch('', {
             method: 'GET'
         }).then((response) => {
@@ -134,10 +115,10 @@ class HotelContent extends Component {
           <div className="title" onClick={this.toggleHotel}>{this.props.datas.name}</div>
           <div className="content">
             <div className="itemInfo hotelInfo">
-              <ImageBlock img={this.state.thumbnail} />
+              <ImageBlock img={this.props.datas.img[0].img} />
               <TitleBlock titlename={this.props.datas.name} />
               <div className="detailBtn singleItem" data-pid={this.props.datas.key}>
-                <DetailList detailitem={this.state.detailitem} onItemClick={this.props.action.onRightBlockSwitch}/>
+                <DetailList detailitem={this.state.detailitem} onItemClick={this.props.actions.onRightBlockSwitch}/>
               </div>
               {
                 this.props.datas.guideList.length > 0 ? <DropdownSelect dropdownItem={this.props.datas.guideList} dropdownName="mealSelect"/> : '' /** disabled的判斷 等有api時再放*/

@@ -8,9 +8,9 @@ const actions = {
 };
 
 //控制開關右邊顯示資料的block 待補齊action
-/*actions.onRightBlockSwitch = (type) => {
+actions.onRightBlockSwitch = (type) => {
   console.log(type);
-}*/
+}
 
 /* 左邊補0 */
 function padLeft(str, len) {

@@ -18,7 +18,7 @@ class TrafficContent extends Component {
   
   render(){
     return(
-        <div className="trafficItem" onClick={this.props.action.onRightBlockSwitch.bind(this, 'routeMap')}
+        <div className="trafficItem" onClick={this.props.actions.onRightBlockSwitch.bind(this, 'routeMap')}
             data-name={this.props.datas.trafficInfo.name}
             data-distance={this.props.datas.trafficInfo.distance}
             data-duration={this.props.datas.trafficInfo.duration}

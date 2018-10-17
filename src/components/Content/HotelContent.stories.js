@@ -9,4 +9,4 @@ import { task, actions } from '../Base/Base.func';
 let datas = hoteldemodatas;
 
 storiesOf('HotelContent', module)
-  .add('hotel_content', () => <HotelContent datas={datas} action={actions} />);
+  .add('hotel_content', () => <HotelContent datas={datas} actions={actions} />);

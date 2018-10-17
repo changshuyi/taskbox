@@ -8,4 +8,4 @@ import { task, actions } from '../Base/Base.func';
 let datas = poidemodatas;
 
 storiesOf('POIContent', module)
-  .add('poi_content', () => <POIContent datas={datas} action={actions} />);
+  .add('poi_content', () => <POIContent datas={datas} actions={actions} />);
