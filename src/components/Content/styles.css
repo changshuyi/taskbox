@@ -492,6 +492,103 @@
 .trafficItem i.lion {
 	margin-right: 5px;
 }
+
+/*-------詳情區塊-------------------------------------------------------------------------------------------------------------------------*/
+.detailBlock{
+	display: none;
+	position: absolute;
+	top: 0px;
+	z-index: 1;
+	width: 100%;
+	height: 665px;
+	background-color: #FFF;
+	border-radius: 10px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+	box-shadow: 0px 0px 5px 0px rgba(155,155,155,0.8);
+	overflow: hidden;
+}
+
+
+.detailBlock .content{
+	position: relative;
+	padding: 20px;
+	color: #000;
+	height: 410px;
+	overflow-y: auto;
+}
+
+.detailBlock .content p{
+	margin-bottom: 20px;
+}
+
+.detailBlock .content h1{
+	font-size: 20px;
+	margin: 0px 0px 12px 0px;
+}
+
+.detailBlock .content .guideType select{
+	font-size: 14px;
+	height: 28px;
+	margin: 0px 0px 12px 0px;
+	border: 1px solid #CCC;
+	background-color: #FFF;
+	min-width: 80px;
+}
+
+.detailBlock .content .guideInfo{
+	margin-top: 20px;
+	color: #4A4A4A;
+
+}
+
+.detailBlock .content .guideInfo .guideTitle{
+	position: relative;
+	left: -20px;
+	display: inline-block;
+	margin-bottom: 12px;
+	background-color: #EA541C;
+	color: #FFF;
+	padding:6px 14px;
+	font-weight: bold;
+}
+
+.detailBlock .content .guideInfo .information{
+	font-size: 14px;
+}
+
+.detailBlock .favoriteBtn{
+	position: absolute;
+	right: 78px;
+	top: 177px;
+	z-index: 5;
+	background: url(../img/poi_like_c@2x.png) no-repeat;
+	background-size: 48px 48px;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+}
+
+.detailBlock .favoriteBtn.active{
+	background: url(../img/poi_liked@2x.png) no-repeat;
+	background-size: 48px 48px;
+}
+
+.detailBlock .addBtn{
+	position: absolute;
+	right: 20px;
+	top: 177px;
+	z-index: 5;
+	background: url(../img/poi_add.png) no-repeat;
+	width: 46px;
+	height: 46px;
+	cursor: pointer;
+}
+
+.detailBlock .itemDetail{
+	margin-top: 12px;
+}
+
 /*-------i icon-------------------------------------------------------------------------------------------------------------------------*/
 i.lion.hotel {
 	top: 5px;

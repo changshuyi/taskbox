@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import TaskList from './TaskList';
+import CheckboxGroup from './CheckboxGroup';
 import { task, actions } from './Task.stories';
 
 export const defaultTasks = [
@@ -23,4 +24,5 @@ storiesOf('TaskList', module)
   .add('default', () => <TaskList tasks={defaultTasks} {...actions} />)
   .add('withPinnedTasks', () => <TaskList tasks={withPinnedTasks} {...actions} />)
   .add('loading', () => <TaskList loading tasks={[]} {...actions} />)
-  .add('empty', () => <TaskList tasks={[]} {...actions} />);
+  .add('empty', () => <TaskList tasks={[]} {...actions} />)
+  .add('CheckboxGroup', () => <CheckboxGroup tasks={withPinnedTasks} {...actions} />);
