@@ -1,7 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import TaskList from './TaskList';
+import ComponentList from './ComponentList';
 import CheckboxGroup from './CheckboxGroup';
 import { task, actions } from './Task.stories';
 
@@ -19,10 +19,10 @@ export const withPinnedTasks = [
   { id: '6', title: 'Task 6 (pinned)', state: 'TASK_PINNED' },
 ];
 
-storiesOf('TaskList', module)
+storiesOf('ComponentList', module)
   .addDecorator(story => <div style={{ padding: '3rem' }}>{story()}</div>)
-  .add('default', () => <TaskList tasks={defaultTasks} {...actions} />)
-  .add('withPinnedTasks', () => <TaskList tasks={withPinnedTasks} {...actions} />)
-  .add('loading', () => <TaskList loading tasks={[]} {...actions} />)
-  .add('empty', () => <TaskList tasks={[]} {...actions} />)
+  .add('default', () => <ComponentList tasks={defaultTasks} {...actions} />)
+  .add('withPinnedTasks', () => <ComponentList tasks={withPinnedTasks} {...actions} />)
+  .add('loading', () => <ComponentList loading tasks={[]} {...actions} />)
+  .add('empty', () => <ComponentList tasks={[]} {...actions} />)
   .add('CheckboxGroup', () => <CheckboxGroup tasks={withPinnedTasks} {...actions} />);

@@ -3,12 +3,17 @@ import { action } from '@storybook/addon-actions';
 const actions = {
   onRightBlockSwitch: action('onRightBlockSwitch'),
   durationToTime: action('durationToTime'),
+  onLeftBlockSwitch:action('onRightBlockSwitch'),
   onPinTask: action('onPinTask'),
   onArchiveTask: action('onArchiveTask'),
 };
 
 //控制開關右邊顯示資料的block 待補齊action
 actions.onRightBlockSwitch = (type) => {
+  console.log(type);
+}
+
+actions.onLeftBlockSwitch = (type) => {
   console.log(type);
 }
 

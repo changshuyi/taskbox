@@ -1,0 +1,217 @@
+.listBlock .listItem{
+	position: relative;
+	background-color: #FFF;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(155,155,155,0.8);
+
+	box-shadow: 0px 0px 5px 0px rgba(155,155,155,0.8);
+	padding: 10px 10px;
+	margin-bottom: 15px;
+}
+.listBlock .listItem:not(.full):first-child{
+	border-top-left-radius: 0px;
+}
+.listBlock .listItem>.title{
+	line-height: 40px;
+	margin-bottom: 15px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EEE;
+	color: #000;
+	font-size: 16px;
+	font-weight: bold;
+}
+.listBlock .listItem .title i.flight{
+	float: left;
+	margin-right: 10px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	/*background-image: url(../../img/ic_triplist_flight@2x.png);*/
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+}
+.listBlock .listItem .title i.memo{
+	float: left;
+	margin-right: 10px;
+	display: block;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	/*background: url(../../img/ic_triplist_memo@2x.png) center center no-repeat;*/
+	background-size: 28px 28px;
+	background-color: #ff6633;
+}
+.listBlock .listItem .singleFlight{
+	position: relative;
+	margin-top: 10px;
+}
+.listBlock .listItem .singleFlight .date{
+	font-weight: bold;
+	margin-bottom: 20px;
+	font-size: 16px;
+}
+.listBlock .listItem .singleFlight .info{
+	padding-bottom: 20px;
+}
+.listBlock .listItem .singleFlight .info img{
+	width: 40px;
+	margin-right: 5px;
+}
+.listBlock .listItem .singleFlight .info .flightTime{
+	position: absolute;
+	left: 200px;
+	top: 30px;
+	display: block;
+}
+.listBlock .listItem .singleFlight .info .departTime{
+	text-align: right;
+
+}
+.listBlock .listItem .singleFlight .info .departTime, .listBlock .listItem .singleFlight .info .destinateTime{
+	display: inline-block;
+	width: 120px;
+}
+.listBlock .listItem .singleFlight .info .departTime>span, .listBlock .listItem .singleFlight .info .destinateTime>span{
+	display: block;
+	color: #999;
+}
+.listBlock .listItem .singleFlight .info .duration{
+	text-align: center;
+	width: 280px;
+	display: inline-block;
+	/*background: url(../../img/ic_choose_flight@2x.png) center center no-repeat;*/
+	background-size: 262px 16px;
+}
+.listBlock .listItem .singleFlight .info .duration>span{
+	display: block;
+	margin-top: 10px;
+}
+.listBlock .listItem .singleFlight .info .duration>span.blue{
+	color: #4568B1;
+}
+.listBlock .listItem .singleFlight .info .duration>span.orange{
+	color: #ff6633;
+}
+.listBlock .listItem .dayCircle{
+	display: inline-block;
+	border-radius: 20px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	color: #FFF;
+	font-size: 16px;
+	text-align: center;
+	background-color: #ff6633;
+	margin-right: 10px;
+	font-style: normal;
+}
+
+.listBlock .listItem .scheduleList{
+	padding-top: 10px;
+	border-right: 1px solid #EEE;
+}
+.listBlock .listItem .scheduleList>.title{
+	padding-left: 50px;
+}
+.listBlock .listItem .title{
+	margin-bottom: 0px;
+}
+.listBlock .listItem .title>i{
+	margin-right: 5px;
+}
+.listBlock .listItem .scheduleList>.info{
+	padding-left: 70px;
+}
+.listBlock .listItem .scheduleList>.info p.desc{
+	color: #999;
+	font-size: 12px;
+	margin-left: 15px;
+}
+.listBlock .listItem .memoBlock textarea{
+	border: 0px;
+	padding: 5px 0px;
+	width: 100%;
+	height: 150px;
+	color: #000;
+}
+.listBlock .listItem  .mealList{
+	padding-top: 10px;
+	padding-left: 15px;
+	min-height: 200px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #EEE;
+	margin-bottom: 10px;
+}
+.listBlock .listItem  .hotelList{
+	padding-left: 15px;
+}
+.listBlock .listItem .grayTable{
+	width: 100%;
+}
+.listBlock .listItem .grayTable tr th{
+	background-color: #E5E8EC;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	border-right: 1px solid #EEE;
+	font-size: 16px;
+
+}
+.listBlock .listItem .grayTable tr th:last-child{
+	border-right: 0px;
+}
+.listBlock .listItem .grayTable tr td{
+	text-align: center;
+	border: 1px solid #E5E8EC;
+	padding: 8px 10px;
+	height: 50px;
+	font-size: 16px;
+}
+.listBlock .listItem .grayTable tr td p{
+	margin: 0px;
+	line-height: 21px;
+}
+.listBlock .listItem .grayline{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+	display: inline-block;
+	width: 2px;
+	height: 20px;
+	background-color: #E5E8EC;
+}
+.listBlock .listItem.withTable{
+	padding: 0px;
+	overflow: hidden;
+}
+.listBlock .listItem .memoBlock.old textarea{
+	margin-left: 5px;
+	font-style: 16px;
+	color: #9B9B9B;
+}
+.listBlock .listItem .memoBlock.old textarea:focus{
+  outline-color: transparent;
+  outline-style: none;
+}
+.listBlock .listItem .grayTable.schedule tr td{
+	padding: 15px 20px;
+	text-align: left;
+	font-size: 14px;
+}
+.listBlock .listItem .grayTable.schedule tr td p{
+	font-size: 12px;
+}
+.listBlock .listItem .grayTable.schedule tr td i.lion.meal-orange,
+.listBlock .listItem .grayTable.schedule tr td i.lion.hotel-orange{
+	margin-right: 10px;
+}
+
+.listBlock .listItem .grayTable.schedule tr td.day{
+	text-align: center;
+	width: 130px;
+}
+
+.listBlock .listItem.noLeftTopRadius{
+	border-top-left-radius: 0px;
+}

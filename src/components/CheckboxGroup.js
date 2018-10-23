@@ -11,14 +11,13 @@ class Checkbox extends Component {
     }
 
     handleChange = () =>{
-        console.log(this);
         this.setState({
             isChecked: !this.state.isChecked
         });
         this.props.handleChange(!this.state.isChecked, this.props.index);
         this.props.changeCSS('red');
     }
-
+    
     render() {
         return (
             <label>
@@ -35,13 +34,36 @@ class CheckboxGroup extends Component {
         super(props);
         console.log(props);
         this.state = {
-            isChecked: false,
+            isChecked: this.props.check,
+            checkedAll: false,
+            checkedInvert: false
         };
     }
 
+    //全選
+    handleAllChange(){
+        const { checkedAll} = this.state;
+
+        data.map(function(item, index){
+            return item.checked = !checkedAll;
+        })
+
+        this.setState({
+            isChecked: true,
+            checkedAll: !checkedAll,
+            checkedInvert: false,
+            
+        });
+    }
+
+    //反選
+    handleInvertChange(inputcheck){
+        this.setState({
+            isChecked: false
+        });
+    }
+
     toggleChange = (isChecked, index) => {
-        console.log(this);
-        console.log(isChecked);
         this.setState({
             isChecked: !isChecked
         });
@@ -50,8 +72,9 @@ class CheckboxGroup extends Component {
             inputcheck.push(index);
         else
             inputcheck.splice(inputcheck.indexOf(index), 1);
-        
-        console.log(inputcheck);
+
+        if(inputcheck.length > 3)
+            this.handleInvertChange(inputcheck);
 
         this.showToggleDatas(index);
     }

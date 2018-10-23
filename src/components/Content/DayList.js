@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import POIContent from './POIContent';
 import poidemodatas from './demodatas/poidemodatas';
 
+import './styles.css';
+
 class DayList extends Component {
   constructor (props) {
     super(props);
