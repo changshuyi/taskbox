@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import  './styles/listBlock.css';
+import  '../Content/styles/listBlock.css';
 
 function SingleFlight(props) {
     return (
@@ -12,10 +12,11 @@ function SingleFlight(props) {
     );
 }
 
+//判斷航班跟行程用的css不一樣
 function Title(props) {
     return (
         <div className="title">
-            <i className="lion bag-orange">{props.title}</i>
+            <i className="dayCircle"></i>{props.title}
         </div>
     );
 }

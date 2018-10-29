@@ -27,7 +27,7 @@
 	display: block;
 	width: 40px;
 	height: 40px;
-	/*background-image: url(../../img/ic_triplist_flight@2x.png);*/
+	background-image: url(../../img/ic_triplist_flight@2x.png);
 	background-repeat: no-repeat;
 	background-size: 40px 40px;
 }
@@ -38,7 +38,7 @@
 	width: 40px;
 	height: 40px;
 	border-radius: 20px;
-	/*background: url(../../img/ic_triplist_memo@2x.png) center center no-repeat;*/
+	background: url(../../img/ic_triplist_memo@2x.png) center center no-repeat;
 	background-size: 28px 28px;
 	background-color: #ff6633;
 }
@@ -80,7 +80,7 @@
 	text-align: center;
 	width: 280px;
 	display: inline-block;
-	/*background: url(../../img/ic_choose_flight@2x.png) center center no-repeat;*/
+	background: url(../../img/ic_choose_flight@2x.png) center center no-repeat;
 	background-size: 262px 16px;
 }
 .listBlock .listItem .singleFlight .info .duration>span{

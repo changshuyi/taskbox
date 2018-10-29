@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import DayInfo from './Content/DayInfo';
-import DayList from './Content/DayList';
+import DayInfo from '../Content/DayInfo';
+import DayList from '../Content/DayList';
 
 class ItineraryBlock extends Component {
   constructor (props) {

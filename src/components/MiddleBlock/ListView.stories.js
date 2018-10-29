@@ -2,8 +2,8 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 
 import ListBlock from './ListBlock';
-import poidemodatas from './demodatas/poidemodatas';
-import placelistdemodatas from './demodatas/placelistdemodatas';
+import poidemodatas from '../Content/demodatas/poidemodatas';
+import placelistdemodatas from '../Content/demodatas/placelistdemodatas';
 import { task, actions } from '../Base/Base.func';
 
 storiesOf('ListBlock', module)

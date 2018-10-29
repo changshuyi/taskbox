@@ -4,6 +4,11 @@ import './styles.css';
 
 import { DetailList, DropdownSelect} from '../Base/Items.func';
 
+if (process.env.NODE_ENV !== 'production') {
+  const { whyDidYouUpdate } = require('why-did-you-update');
+  whyDidYouUpdate(React);
+}
+
 /**
  * 1.HotelContent 最大區塊 (用來組織包含其他子元件 -> 這個元件的最上層的容器)
  * 2.ImageBlock 圖片區塊 (放到HotelContent中)
